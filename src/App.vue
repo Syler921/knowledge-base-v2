@@ -1,28 +1,55 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+   
+    <div class="container knowledge-base-layout">
+      <div class="row knowledge-base-wrapper">
+        <div style="background:green;padding: 0;" class="col-3 no-float">
+          test
+          <Navigation></Navigation>
+        </div>
+        <div style="background:red" class="col-9 no-float">
+          <div class="row" style="background:pink">search ???<Search/></div>
+          <div class="row">
+            <div style="background:gray" class="card col px-2">
+              1 of 3
+            </div>
+            <div  style="background:gray" class="card col-6 px-2">
+              2 of 3 (wider)
+              <HelloWorld/>
+            </div>
+            <div  style="background:gray" class="card col px-2">
+              <Stats/>
+            </div>
+          </div>
+ 
+        </div>
+      </div>
+    </div>
   </div>
+  
 </template>
 
 <script>
+
 import HelloWorld from './components/HelloWorld.vue'
+import Stats from './components/Stats.vue'
+import Navigation from './components/Navigation.vue'
+import Search from './components/Search.vue'
+
+
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    HelloWorld,
+    Stats,
+    Navigation,
+    Search
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "styles.scss";
+
 </style>
